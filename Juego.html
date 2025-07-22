@@ -1,34 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego de cartas</title>
     <link rel="stylesheet" href="style.css">
+    <script src="codigo/app.js"></script>
 </head>
+
 <body>
     <div class="encabezado">
-    <h1>Juego de cartas</h1>
+        <h1>Juego de cartas</h1>
     </div>
-        <div class="botones">
+    <div class="botones">
      <button class="boton"onclick="repartir()">
         <img src="imagenes/Iconos/repartir (2).png" alt="repartir las cartas"style="width: 64px;">
     </button>
-     <button class="boton">
+     <button class="boton"onclick="verificar()">
         <img src="imagenes/Iconos/verificar2.png" alt="hallar grupos de cartas"style="width: 64px;">
     </button>
     </div>
-    <div id="tablero">
-
+    <div id="tablero"class="tablero">
     </div>
-    <script>
-        function repartir(){
-let tablero=document.getElementById("tablero");
-let carta=document.createElement("img");
-let indice=Math.floor(Math.random()*52) + 1;
-carta.src="imagenes/cartas[1]/Carta"+indice+".JPG";
-tablero.appendChild(carta);
-        }
-    </script>
 </body>
 </html>
